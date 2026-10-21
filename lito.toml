@@ -1,0 +1,22 @@
+[workspace]
+name = "liresto"
+members = ["core", "builder", "tool", "script", "examples/embed"]
+default-members = ["core", "builder"]
+
+[workspace.package]
+version = "0.1.0"
+license = "MIT OR Apache-2.0"
+authors = ["hypengw <hypengwip@gmail.com>"]
+
+[workspace.dependencies]
+liresto = { path = "core" }
+liresto-build = { path = "builder" }
+liresto-pack = { path = "tool" }
+rstd-std = "0.1.9"
+rstd-nostd = "0.1.9"
+rstd-test = "0.1.9"
+licrypto = "0.1.2"
+
+[profile.base]
+exceptions = false
+rtti = false

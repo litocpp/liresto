@@ -1,0 +1,16 @@
+[package]
+name = "liresto-example"
+version = "0.1.0"
+[lib]
+name = "liresto-example"
+module = "liresto.example"
+archive = "liresto.example"
+[[bin]]
+name = "liresto-example"
+sources = ["main.cpp"]
+link-stdlib = false
+[dependencies]
+liresto = { path = "../../core", pub = true }
+liresto-pack = { path = "../../tool", usage = "tool" }
+lito-resource = { path = "../../script" }
+rstd-nostd = { version = "0.1.9", usage = "link" }

@@ -1,0 +1,13 @@
+[package]
+name = "liresto-pack"
+version.workspace = true
+license.workspace = true
+authors.workspace = true
+[[bin]]
+name = "liresto-pack"
+sources = ["src/main.cpp"]
+host-tool = true
+link-stdlib = false
+[dependencies]
+liresto-build.workspace = true
+rstd-nostd = { workspace = true, usage = "link" }

@@ -1,0 +1,12 @@
+[package]
+name = "liresto-tests"
+version = "0.1.0"
+[[test]]
+name = "liresto-tests"
+sources = ["main.cpp", "resources.cpp"]
+link-stdlib = false
+[dependencies]
+liresto = { path = "../core" }
+liresto-build = { path = "../builder" }
+rstd-test = "0.1.9"
+rstd-nostd = { version = "0.1.9", usage = "link" }
