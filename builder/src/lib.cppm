@@ -92,7 +92,10 @@ public:
     }
     auto add_memory(ref<str> path, Vec<u8> contents) -> BuildResult<empty> {
         if (! valid_path(path)) return Err(rstd::format("invalid resource path '{}'", path));
-        auto digest = licrypto::sha256_hex(contents.as_slice());
+        auto digest =
+            rstd_try(licrypto::sha256_hex(contents.as_slice()).map_err([&](licrypto::Error error) {
+                return rstd::format("cannot hash resource '{}': {}", path, error);
+            }));
         entries_.push(Entry { String::make(path), rstd::move(contents), rstd::move(digest) });
         return Ok(empty {});
     }

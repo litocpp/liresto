@@ -15,7 +15,7 @@ liresto-pack = { path = "tool" }
 rstd-std = "0.1.9"
 rstd-nostd = "0.1.9"
 rstd-test = "0.1.9"
-licrypto = "0.1.2"
+licrypto = "0.2.0"
 
 [profile.base]
 exceptions = false
