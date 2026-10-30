@@ -11,3 +11,4 @@ archive = "liresto"
 
 [dependencies]
 rstd-std = { workspace = true, pub = true }
+licrypto.workspace = true

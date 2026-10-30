@@ -1,7 +1,7 @@
 module;
 #include <rstd/macro.hpp>
-export module liresto.build;
-export import liresto;
+export module liresto:build;
+import :resource;
 import licrypto;
 using namespace rstd::prelude;
 using namespace rstd::literals;

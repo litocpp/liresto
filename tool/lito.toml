@@ -9,5 +9,5 @@ sources = ["src/main.cpp"]
 host-tool = true
 link-stdlib = false
 [dependencies]
-liresto-build.workspace = true
+liresto.workspace = true
 rstd-nostd = { workspace = true, usage = "link" }

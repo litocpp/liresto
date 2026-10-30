@@ -1,5 +1,5 @@
 #include <rstd/macro.hpp>
-import liresto.build;
+import liresto;
 using namespace rstd::prelude;
 using namespace rstd::literals;
 using namespace liresto::build;

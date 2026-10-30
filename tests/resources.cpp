@@ -1,5 +1,5 @@
 #include <rstd/test/gtest.hpp>
-import liresto.build;
+import liresto;
 using namespace rstd::prelude;
 using namespace rstd::literals;
 using rstd::bytes::Bytes;
