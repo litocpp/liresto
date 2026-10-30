@@ -63,7 +63,7 @@ local function embed(options)
   local depfile = { output = 3 }
   if options.roots and #options.roots > 0 then depfile.roots = options.roots end
   local result = lito.run({
-    tool = options.tool or lito.host_tool(options.target, "liresto-pack", "liresto-pack"),
+    tool = options.tool or lito.host_tool(options.target, "liresto", "liresto-pack"),
     cwd = ".", args = args, inputs = #inputs > 0 and inputs or nil,
     input_roots = #input_roots > 0 and input_roots or nil,
     outputs = { output .. ".cpp", output .. ".bin", output .. ".d" },

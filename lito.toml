@@ -1,6 +1,6 @@
 [workspace]
 name = "liresto"
-members = ["core", "tool", "script", "examples/embed"]
+members = ["core", "script", "examples/embed"]
 default-members = ["core"]
 
 [workspace.package]
@@ -10,7 +10,6 @@ authors = ["hypengw <hypengwip@gmail.com>"]
 
 [workspace.dependencies]
 liresto = { path = "core" }
-liresto-pack = { path = "tool" }
 rstd-std = "0.1.9"
 rstd-nostd = "0.1.9"
 rstd-test = "0.1.9"

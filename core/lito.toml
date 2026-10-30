@@ -9,6 +9,13 @@ name = "liresto"
 module = "liresto"
 archive = "liresto"
 
+[[bin]]
+name = "liresto-pack"
+sources = ["bin/pack.cpp"]
+host-tool = true
+link-stdlib = false
+
 [dependencies]
 rstd-std = { workspace = true, pub = true }
 licrypto.workspace = true
+rstd-nostd = { workspace = true, usage = "link" }

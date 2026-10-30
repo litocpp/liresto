@@ -39,8 +39,7 @@ name = "liresto-integration"
 sources = ["main.cpp"]
 link-stdlib = false
 [dependencies]
-liresto = {{ path = {quote(relative(repo / "core"))}, pub = true }}
-liresto-pack = {{ path = {quote(relative(repo / "tool"))}, usage = "tool" }}
+liresto = {{ path = {quote(relative(repo / "core"))}, pub = true, usage = ["compile", "link", "tool"] }}
 lito-resource = {{ path = {quote(relative(repo / "script"))} }}
 rstd-nostd = {{ version = "0.1.9", usage = "link" }}
 [build-tools.python]
@@ -106,7 +105,10 @@ resources.embed({target=target, module="integration.resources", namespace="integ
 
     run_build()
     if args.isolated_host:
-        assert (build / "plugin-host/bin/liresto-pack/liresto-pack").is_file()
+        assert (build / "plugin-host/bin/liresto/liresto-pack").is_file()
+    else:
+        assert (build / "bin/liresto/liresto-pack").is_file()
+        assert not (build / "plugin-host").exists()
     before = contents()
     assert "index.html 4 " in before and "empty 0 " in before
     assert ".env" not in before and ".map" not in before
