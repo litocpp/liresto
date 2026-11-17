@@ -41,7 +41,7 @@ link-stdlib = false
 [dependencies]
 liresto = {{ path = {quote(relative(repo / "core"))}, pub = true, usage = ["compile", "link", "tool"] }}
 lito-resource = {{ path = {quote(relative(repo / "script"))} }}
-rstd-nostd = {{ version = "0.1.9", usage = "link" }}
+rstd-nostd = {{ version = "0.1.13", usage = "link" }}
 [build-tools.python]
 path = {quote(__import__("sys").executable)}
 [profile.base]

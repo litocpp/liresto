@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.29)
 
 project(
   liresto
-  VERSION 0.1.0
+  VERSION 0.1.1
   LANGUAGES CXX)
 
 add_library(liresto STATIC)

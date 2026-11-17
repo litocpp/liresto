@@ -12,4 +12,4 @@ link-stdlib = false
 [dependencies]
 liresto = { path = "../../core", pub = true, usage = ["compile", "link", "tool"] }
 lito-resource = { path = "../../script" }
-rstd-nostd = { version = "0.1.9", usage = "link" }
+rstd-nostd = { version = "0.1.13", usage = "link" }

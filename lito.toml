@@ -4,16 +4,16 @@ members = ["core", "script", "examples/embed"]
 default-members = ["core"]
 
 [workspace.package]
-version = "0.1.0"
+version = "0.1.1"
 license = "MIT OR Apache-2.0"
 authors = ["hypengw <hypengwip@gmail.com>"]
 
 [workspace.dependencies]
 liresto = { path = "core" }
-rstd-std = "0.1.9"
-rstd-nostd = "0.1.9"
-rstd-test = "0.1.9"
-licrypto = "0.2.0"
+rstd-std = "0.1.13"
+rstd-nostd = "0.1.13"
+rstd-test = "0.1.13"
+licrypto = "0.2.2"
 
 [profile.base]
 exceptions = false
